@@ -50,7 +50,7 @@ snippet eval
 	eval {
 		${1:# do something risky...}
 	};
-	if ($@) {
+	if (my $e = $@) {
 		${2:# handle failure...}
 	}
 # While Loop
