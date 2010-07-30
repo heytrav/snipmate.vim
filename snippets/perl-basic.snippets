@@ -66,26 +66,40 @@ snippet case
 		${2:# body}
 	}
 
-
+# Pod stub
 snippet ppod
 	=head1 NAME
 
 	${1:ClassName} - ${2:ShortDesc}
 
 	=head1 SYNOPSIS
+	
+	  use $1;
 
-	${3:# synopsis...}
+	  ${3:# synopsis...}
 
 	=head1 DESCRIPTION
 
 	${4:# longer description...}
 
+
+	=head1 INTERFACE
+
+	
+	=head1 DEPENDENCIES
+
+
+	=head1 SEE ALSO
+
+
+# Heading for a subroutine stub
 snippet psub
 	=head2 ${1:MethodName}
 
 	${2:Summary....}
 
 
+# Subroutine signature
 snippet parg
 	=over 2
 
@@ -99,6 +113,19 @@ snippet parg
 	C<${1:DataStructure}>
 
 	  ${2:Sample}
+
+
+	=back
+
+
+	=item
+	Return
+
+	=over 3
+
+
+	=item
+	C<${3:...return data}>
 
 
 	=back
