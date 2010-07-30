@@ -66,6 +66,15 @@ snippet case
 		${2:# body}
 	}
 
+# hash slice
+snippet hslice
+	@{ ${1:hash}  }{ ${2:array} }
+
+
+# map
+snippet map
+	map {  ${2: body }    }  ${1: @array } ;
+
 # Pod stub
 snippet ppod
 	=head1 NAME
