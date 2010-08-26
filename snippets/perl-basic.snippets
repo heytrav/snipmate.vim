@@ -14,12 +14,18 @@ snippet vers
 	## use critic
 
 
+# new 'switch' like feature
+snippet switch
+	use feature 'switch';
+
+
 
 # Anonymous subroutine
 snippet asub
 	sub { 
 	 	${1:# body }
 	}
+
 
 
 # Begin block
@@ -54,26 +60,30 @@ snippet qrx
 snippet qr/
 	qr/${1:regex}/x
 
-#switch
-snippet switch
-	switch ($${1:var}) { #{{{
+#given
+snippet given
+	given ($${1:var}) { #{{{
 		${2:# cases}
+		${3:# default}
 	} #}}}
 
-# switch case
-snippet case
-	case ${1:case} { 
+# switch-like case
+snippet when
+	when (${1:case}) { #{{{
 		${2:# body}
-	}
+	} #}}}
 
 # hash slice
 snippet hslice
 	@{ ${1:hash}  }{ ${2:array} }
 
 
+
 # map
 snippet map
 	map {  ${2: body }    }  ${1: @array } ;
+
+
 
 # Pod stub
 snippet ppod
