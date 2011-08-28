@@ -80,12 +80,12 @@ snippet cl
 	
 	use base qw(${2:ParentClass});
 	
-	sub new {
+	sub new { #{{{
 		my $class = shift;
 		$class = ref $class if ref $class;
 		my $self = bless {}, $class;
 		$self;
-	}
+	} #}}}
 	
 	1;${3}
 # Read File
